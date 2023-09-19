@@ -37,4 +37,11 @@ The dataset 'Early January Weather' depicts the hourly meterological data for th
   * The mean precipitation in inches is `r mean(early_january_weather$precip)` (SD `r sd(early_january_weather$precip)`), with minimum value `r min(early_january_weather$precip)` and maximum value `r max(early_january_weather$precip)`. 
   * The mean visibility in miles is `r mean(early_january_weather$visib)` (SD `r sd(early_january_weather$visib)`), with minimum value `r min(early_january_weather$visib)` and maximum value `r max(early_january_weather$visib)`. 
   * Statistics could not be obtained for the variables wind gust, wind direction, and pressure due to missing variables (`r sum(is.na(early_january_weather$wind_gust))` missing values for wind gust, `r sum(is.na(early_january_weather$wind_dir))` missing values for wind direction, and `r sum(is.na(early_january_weather$pressure))` missing values for pressure). 
+  
+Next make a scatterplot of temp (y) vs time (hour) adding in color points with the humid variable. 
+
+```{r yx_scatter}
+ggplot(early_january_weather, aes(x = hour, y = temp, 
+color = humid)) + geom_point()
+```
 

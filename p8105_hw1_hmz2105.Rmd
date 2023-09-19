@@ -20,3 +20,11 @@ Load early_january_weather dataset.
 ```{r dataset}
 data("early_january_weather")
 ```
+
+Examine the dataset using the help and View functions.
+
+```{r dataset help and view, eval = FALSE}
+help(early_january_weather)
+View(early_january_weather)
+```
+

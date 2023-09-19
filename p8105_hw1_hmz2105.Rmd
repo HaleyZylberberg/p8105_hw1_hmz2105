@@ -28,3 +28,13 @@ View(early_january_weather)
 ```
 
 The dataset 'Early January Weather' depicts the hourly meterological data for the airport `r unique(early_january_weather$origin)` for the month of January 2013. There are  `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns (i.e. variables) in the dataset. The variable names are `r names(early_january_weather)`. 
+
+* The following are summary statistics:
+  * The mean temperature in F is `r mean(early_january_weather$temp)` (SD `r sd(early_january_weather$temp)`), with minimum value `r min(early_january_weather$temp)` and maximum value `r max(early_january_weather$temp)`. 
+  * The mean dewpoint in F is `r mean(early_january_weather$dewp)` ( SD `r sd(early_january_weather$dewp)`), with minimum value `r min(early_january_weather$dewp)` and maximum value `r max(early_january_weather$dewp)`. 
+  * The mean humidity is `r mean(early_january_weather$humid)` (SD `r sd(early_january_weather$humid)`), with minimum value `r min(early_january_weather$humid)` and maximum value `r max(early_january_weather$humid)`. 
+  * The mean wind speed in mph is `r mean(early_january_weather$wind_speed)` (SD `r sd(early_january_weather$wind_speed)`), with minimum value `r min(early_january_weather$wind_speed)` and maximum value `r max(early_january_weather$wind_speed)`. 
+  * The mean precipitation in inches is `r mean(early_january_weather$precip)` (SD `r sd(early_january_weather$precip)`), with minimum value `r min(early_january_weather$precip)` and maximum value `r max(early_january_weather$precip)`. 
+  * The mean visibility in miles is `r mean(early_january_weather$visib)` (SD `r sd(early_january_weather$visib)`), with minimum value `r min(early_january_weather$visib)` and maximum value `r max(early_january_weather$visib)`. 
+  * Statistics could not be obtained for the variables wind gust, wind direction, and pressure due to missing variables (`r sum(is.na(early_january_weather$wind_gust))` missing values for wind gust, `r sum(is.na(early_january_weather$wind_dir))` missing values for wind direction, and `r sum(is.na(early_january_weather$pressure))` missing values for pressure). 
+

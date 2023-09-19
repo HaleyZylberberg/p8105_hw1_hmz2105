@@ -10,13 +10,12 @@ To start, download the penguins dataset in the console directly.
 
 Next, call in moderndrive and tidyverse library.
 
-```{r setup, eval = FALSE}
+```{r setup}
 library(moderndive)
 library(tidyverse)
 ```
 
 Load early_january_weather dataset.
-
 ```{r dataset}
 data("early_january_weather")
 ```
@@ -28,3 +27,4 @@ help(early_january_weather)
 View(early_january_weather)
 ```
 
+The dataset 'Early January Weather' depicts the hourly meterological data for the airport `r unique(early_january_weather$origin)` for the month of January 2013. There are  `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns (i.e. variables) in the dataset. The variable names are `r names(early_january_weather)`. 

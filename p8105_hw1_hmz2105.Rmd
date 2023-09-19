@@ -90,10 +90,10 @@ The mean of the variable random sample is `r mean_random_sample`. The mean of th
 
 Convert logical, character, and factor vectors to numeric.
 
-```{r convert to numeric, warning=FALSE}
+```{r convert to numeric, eval = FALSE}
 HW1_df$random_sample_pos <- as.numeric(HW1_df$random_sample_pos)
 HW1_df$random_sample_char <- as.numeric(HW1_df$random_sample_char)
 HW1_df$random_sample_fac <- as.numeric(HW1_df$random_sample_fac)
 ```
 
-This code is trying to convert these character variables into numeric variables. However, these variables cannot be converted to numeric, and so mean cannot be calculated.
+This code is trying to convert these character variables into numeric variables. However, the logical and character vectors cannot be converted to numeric, and the factor numeric is meaningless as it converts each level to a number. Therefore the means cannot be calculated.

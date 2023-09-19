@@ -78,9 +78,11 @@ print(HW1_df)
 Calculate mean of each variable.
 
 ```{r pull variables and calculate mean}
-
-
+mean_random_sample = mean(pull(HW1_df, random_sample))
+mean_random_sample_pos = mean(pull(HW1_df, random_sample_pos))
 ```
+
+The mean of the variable random sample is `r mean(mean_random_sample)`. The mean of the logical vector is `r mean(mean_random_sample_pos)`. We cannot calculate the mean of a character or factor variable as they are not numeric variables. 
 
 
 

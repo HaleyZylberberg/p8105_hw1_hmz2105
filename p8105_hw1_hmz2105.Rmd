@@ -14,3 +14,9 @@ Next, call in moderndrive and tidyverse library.
 library(moderndive)
 library(tidyverse)
 ```
+
+Load early_january_weather dataset.
+
+```{r dataset}
+data("early_january_weather")
+```

@@ -63,6 +63,8 @@ This scatterplot shows that
 
 ```{r HW1_df_create and print}
 
+set.seed(123)
+
 HW1_df = tibble(
   random_sample = rnorm(10),
   random_sample_pos = random_sample > 0,
@@ -71,6 +73,13 @@ HW1_df = tibble(
 )
 
 print(HW1_df)
+```
+
+Calculate mean of each variable.
+
+```{r pull variables and calculate mean}
+
+
 ```
 
 

@@ -10,7 +10,7 @@ To start, download the penguins dataset in the console directly.
 
 Next, call in moderndrive and tidyverse library.
 
-```{r setup}
+```{r setup, eval = FALSE}
 library(moderndive)
 library(tidyverse)
 ```

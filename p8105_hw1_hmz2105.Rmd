@@ -86,7 +86,7 @@ mean_random_sample_char = mean(pull(HW1_df, random_sample_char))
 mean_random_sample_fac = mean(pull(HW1_df, random_sample_fac))
 ```
 
-The mean of the variable random sample is `r mean(mean_random_sample)`. The mean of the logical vector is `r mean(mean_random_sample_pos)`, while this is technically a value it is just taking the mean of 0s and 1s, so it is meaningless. We cannot calculate the mean of a character or factor variable as they are not numeric variables. 
+The mean of the variable random sample is `r mean_random_sample`. The mean of the logical vector is `r mean_random_sample_pos`, while this is technically a value it is just taking the mean of 0s and 1s, so it is meaningless. We cannot calculate the mean of a character or factor variable as they are not numeric variables. 
 
 Convert logical, character, and factor vectors to numeric.
 

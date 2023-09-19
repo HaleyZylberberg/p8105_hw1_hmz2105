@@ -45,3 +45,10 @@ ggplot(early_january_weather, aes(x = hour, y = temp,
 color = humid)) + geom_point()
 ```
 
+Next save plot.
+
+```{r save}
+ggsave("scatter_plot_HW1.pdf", height = 4, width = 6)
+```
+
+This scatterplot shows that 

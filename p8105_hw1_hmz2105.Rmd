@@ -8,3 +8,9 @@ output: github_document
 
 To start, download the penguins dataset in the console directly.
 
+Next, call in moderndrive and tidyverse library.
+
+```{r setup}
+library(moderndive)
+library(tidyverse)
+```

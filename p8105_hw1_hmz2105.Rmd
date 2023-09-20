@@ -27,16 +27,16 @@ help(early_january_weather)
 View(early_january_weather)
 ```
 
-The dataset 'Early January Weather' depicts the hourly meterological data for the airport `r unique(early_january_weather$origin)` for the month of January 2013. There are  `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns (i.e. variables) in the dataset. The variable names are `r names(early_january_weather)`. 
+The dataset 'Early January Weather' depicts the hourly meterological data for the airport `r unique(early_january_weather[["origin"]])` for January `r unique(early_january_weather[["year"]])`. There are  `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns (i.e. variables) in the dataset. The variable names are `r names(early_january_weather)`. 
 
 * The following are summary statistics:
-  * The mean temperature in F is `r mean(early_january_weather$temp)` (SD `r sd(early_january_weather$temp)`), with minimum value `r min(early_january_weather$temp)` and maximum value `r max(early_january_weather$temp)`. 
-  * The mean dewpoint in F is `r mean(early_january_weather$dewp)` ( SD `r sd(early_january_weather$dewp)`), with minimum value `r min(early_january_weather$dewp)` and maximum value `r max(early_january_weather$dewp)`. 
-  * The mean humidity is `r mean(early_january_weather$humid)` (SD `r sd(early_january_weather$humid)`), with minimum value `r min(early_january_weather$humid)` and maximum value `r max(early_january_weather$humid)`. 
-  * The mean wind speed in mph is `r mean(early_january_weather$wind_speed)` (SD `r sd(early_january_weather$wind_speed)`), with minimum value `r min(early_january_weather$wind_speed)` and maximum value `r max(early_january_weather$wind_speed)`. 
-  * The mean precipitation in inches is `r mean(early_january_weather$precip)` (SD `r sd(early_january_weather$precip)`), with minimum value `r min(early_january_weather$precip)` and maximum value `r max(early_january_weather$precip)`. 
-  * The mean visibility in miles is `r mean(early_january_weather$visib)` (SD `r sd(early_january_weather$visib)`), with minimum value `r min(early_january_weather$visib)` and maximum value `r max(early_january_weather$visib)`. 
-  * Statistics could not be obtained for the variables wind gust, wind direction, and pressure due to missing variables (`r sum(is.na(early_january_weather$wind_gust))` missing values for wind gust, `r sum(is.na(early_january_weather$wind_dir))` missing values for wind direction, and `r sum(is.na(early_january_weather$pressure))` missing values for pressure). 
+  * The mean temperature in F is `r mean(early_january_weather[["temp"]])` (SD `r sd(early_january_weather[["temp"]])`), with minimum value `r min(early_january_weather[["temp"]])` and maximum value `r max(early_january_weather[["temp"]])`. 
+  * The mean dewpoint in F is `r mean(early_january_weather[["dewp"]])` ( SD `r sd(early_january_weather[["dewp"]])`), with minimum value `r min(early_january_weather[["dewp"]])` and maximum value `r max(early_january_weather[["dewp"]])`. 
+  * The mean humidity is `r mean(early_january_weather[["humid"]])` (SD `r sd(early_january_weather[["humid"]])`), with minimum value `r min(early_january_weather[["humid"]])` and maximum value `r max(early_january_weather[["humid"]])`. 
+  * The mean wind speed in mph is `r mean(early_january_weather[["wind_speed"]])` (SD `r sd(early_january_weather[["wind_speed"]])`), with minimum value `r min(early_january_weather[["wind_speed"]])` and maximum value `r max(early_january_weather[["wind_speed"]])`. 
+  * The mean precipitation in inches is `r mean(early_january_weather[["precip"]])` (SD `r sd(early_january_weather[["precip"]])`), with minimum value `r min(early_january_weather[["precip"]])` and maximum value `r max(early_january_weather[["precip"]])`. 
+  * The mean visibility in miles is `r mean(early_january_weather[["visib"]])` (SD `r sd(early_january_weather[["visib"]])`), with minimum value `r min(early_january_weather[["visib"]])` and maximum value `r max(early_january_weather[["visib"]])`. 
+  * Statistics could not be obtained for the variables wind gust, wind direction, and pressure due to missing variables (`r sum(is.na(early_january_weather[["wind_gust"]]))` missing values for wind gust, `r sum(is.na(early_january_weather[["wind_dir"]]))` missing values for wind direction, and `r sum(is.na(early_january_weather[["pressure"]]))` missing values for pressure). 
   
 Next make a scatterplot of temp (y) vs time (hour) adding in color points with the humid variable. 
 
@@ -91,9 +91,9 @@ The mean of the variable random sample is `r mean_random_sample`. The mean of th
 Convert logical, character, and factor vectors to numeric.
 
 ```{r convert to numeric, eval = FALSE}
-HW1_df$random_sample_pos <- as.numeric(HW1_df$random_sample_pos)
-HW1_df$random_sample_char <- as.numeric(HW1_df$random_sample_char)
-HW1_df$random_sample_fac <- as.numeric(HW1_df$random_sample_fac)
+HW1_df = transform(HW1_df, random_sample_pos = as.numeric(random_sample_pos))
+HW1_df = transform(HW1_df, random_sample_char = as.numeric(random_sample_char))
+HW1_df = transform(HW1_df, random_sample_fac = as.numeric(random_sample_fac))
 ```
 
-This code is trying to convert these character variables into numeric variables. However, the logical and character vectors cannot be converted to numeric, and the factor numeric is meaningless as it converts each level to a number. Therefore the means cannot be calculated.
+This code is trying to convert these variables into numeric variables. However, the  character vectors cannot be converted to numeric. The logical vector becomes a binary numeric value and the factor vector becomes a 3 level numeric value; both are meaningless. Therefore the means cannot be calculated.
